@@ -37,6 +37,6 @@ if __name__ == '__main__':
     #     for each in crops:
     #         disp_img(each)
 
-    coords = get_face_crop_coords(img, fr_model='cnn')
+    coords = get_face_crop_coords(img, fr_model='hog')
     print('Found', len(coords), 'face(s) in image!')
     disp_img(img, coords_list=coords)

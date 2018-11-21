@@ -28,8 +28,9 @@ def get_face_crop_coords(img, fr_number_of_times_to_upsample=1,
 
 
 def crop_image(img, css_ordered_coord):
+    h, w = img.shape[0], img.shape[1]
     top, right, bottom, left = css_ordered_coord
-    top, left = max(top - 1, 0), max(left - 1, 0)
+    bottom, right = min(bottom + 1, h), min(right + 1, w)
     return img[top:bottom, left:right]
 
 
