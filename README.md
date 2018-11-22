@@ -9,14 +9,25 @@ APIs to extract facial feature from given image.
 
 ## Experiments
 
-### Pure `face_recognition` model
+### Face Locations
 
-- `model='hog'`  
-    Fast, acceptable performance  
+- Pure `face_recognition` implementation  
 
-    ![hog](./img/face_locations/hog.jpg)  
+    - `model='hog'`  
+        Fast, acceptable performance  
 
-- `model='cnn'`  
-    **Extremely** slow, but significantly better performance  
+        ![hog](./img/face_locations/hog.jpg)  
 
-    ![cnn](./img/face_locations/cnn.jpg)  
+    - `model='cnn'`  
+        **Extremely** slow, but significantly better on sideway face cases  
+
+        ![cnn](./img/face_locations/cnn.jpg)  
+
+### Face Landmarks
+
+- Pure `face_recognition` implementation  
+
+    - `model=large` (72 points)  
+        Medium in speed, tricky on sideway face cases  
+
+        ![large](./img/face_landmarks/large.jpg)  
